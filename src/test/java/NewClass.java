@@ -21,14 +21,13 @@ public class NewClass {
     }
 
     @Test (priority = 1 , dataProvider = "test_data")
-    public static void TestValidData1 ( String clientName , String updateName)
+    public static void TestValidData1 ( String clientName , String updateClient )
     {
 //        String clientName = "Mona" ;
 //        String updateName = "Mona Ahmed" ;
         AddClient.addClient(clientName);
         SearchClient.searchClient(clientName);
-        ClientAction.editClient(updateName);
-        SearchClient.searchClient(updateName);
+        ClientAction.editClient(updateClient);
     }
 
 //    @Test (priority = 2)
@@ -54,7 +53,7 @@ public class NewClass {
     public String [][] test_data() {
         return new String[][]
                 {
-                        {"Hassan" , "Hassan Ahmed"}
+                        {"Hassan" , "Hassan Mohammed"}
                 };
     }
 }
